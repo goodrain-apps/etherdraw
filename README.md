@@ -21,7 +21,8 @@
     SSL_CERT: 可下载的url,启动时下载该文件并设置生效 (Alpha)
     RESET: 是否重新初始化文件。默认为0。设置为1,则保存的持久化文件丢失
     
-    docker run -it -e PORT=5000 -e DB_TYPE=mysql --link mysql:mysql -e RESET=1 etherdraw
+    docker run -e PORT=5000 -e DB_TYPE=mysql --link mysql:mysql -e RESET=1 etherdraw
+    docker run -e PORT=5000 -e DB_TYPE=dirty etherdraw
 
 
 ##mysql支持:
