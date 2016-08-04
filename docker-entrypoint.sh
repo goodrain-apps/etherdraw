@@ -71,7 +71,6 @@ cd /app/draw
 
 if [[ -f /data/settings.json ]]; then
     cp /data/settings.json /app/draw/
-    chown -R rain:rain /app
 else
     cat > settings.json <<EOF
 {
@@ -115,11 +114,11 @@ EOF
     cp settings.json /data
 fi
 
-
+chown -R rain:rain /app
 if [[ $1 = "bash" ]]; then
     /bin/bash
 else
-    bin/run.sh
+    sudo -HEu rain bin/run.sh
 fi
 
 

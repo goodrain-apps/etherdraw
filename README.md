@@ -25,20 +25,20 @@
     docker run -e PORT=5000 -e DB_TYPE=dirty etherdraw
 
 
-##mysql支持:
+## mysql支持:
 
     正式版本需要使用mysql, 用户提高系统性能。
     默认不关联mysql,如果需要mysql,可以使用如下两种方式:
     1、系统部署在好雨云上, 直接在依赖中关联mysql, 重启即可
-    2、启动容器后,访问http://ip:port/admin,登陆后直接修改settings.json,配置mysql连接信息,重启即可
+    2、使用link方式挂载mysql: -e DB_TYPE=mysql --link mysql:mysql
 
 
-##作者:
+## 作者:
 
     见页面:https://github.com/JohnMcLear/draw/graphs/contributors
 
-##源码:
+## 源码:
     https://github.com/JohnMcLear/draw.git
     
 ## 备注:
-    国内构建可以将docker中屏蔽的代码打开
+    国内构建可以将docker中屏蔽的代码打开line6,line29

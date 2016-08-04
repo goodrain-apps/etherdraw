@@ -40,7 +40,7 @@ RUN mkdir -p /data \
 
 VOLUME /data
 
-USER rain
+#USER rain
 
 ENTRYPOINT ["/app/docker-entrypoint.sh"]
 
