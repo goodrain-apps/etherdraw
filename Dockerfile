@@ -36,7 +36,7 @@ RUN mkdir -p /data \
     && chown -R rain:rain /data \
     && chown -R rain:rain /app \
     && apt-get autoclean \
-    && rm -rf /var/lib/dpkg/* /var/lib/apt/* /tmp/* /usr/share/man/*
+    && rm -rf /tmp/* /usr/share/man/*
 
 VOLUME /data
 
